@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bishal Chaudhary</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='blog.css') }}">
+</head>
+<body>
+    <header id="header" class="header-tops">
+        <div class="container">
+            <div class="logo">
+                <img src="https://byteforge.studio/static/logo-f7f24263d67f0bdc2e26dd6113060b97.png" alt="ByteForge Technologies" />
+            </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="{{ url_for('about_page') }}">About Me</a></li>
+                    <li><a href="{{ url_for('resume_page') }}">Resume</a></li>
+                    <li><a href="{{ url_for('contact_page') }}">Contact</a></li>
+                    <li><a href="{{ url_for('blog_page') }}">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <section class="category">
+            <div class="category-header">
+                <h2>Featured Articles</h2>
+                <a href="#">See All Articles</a>
+            </div>
+            <div class="articles-grid">
+                <article class="article">
+                    <img src="https://media.licdn.com/dms/image/v2/D5612AQHyUL-G_cxWQg/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1683122462873?e=2147483647&v=beta&t=s2t7izdODeZXnu1nGQ59Sj3vtO8tsCUdLkqms56VeWU" alt="Article Image">
+                    <h3>Fundamentals Of Javascript</h3>
+                    <p>by Bishal Chaudhary - 5 min read</p>
+                </article>
+                <article class="article">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkdDy1MPyAklifM98twCxSuRj7EVJPO0cmHg&s" alt="Article Image">
+                    <h3>Grid CSS Makes Your Life Easier</h3>
+                    <p>by Jane Smith - 6 min read</p>
+                </article>
+                <article class="article">
+                    <img src="https://blog.pixelfreestudio.com/wp-content/uploads/2024/07/maxresdefault-4-1-1024x576.jpg" alt="Article Image">
+                    <h3>Make Advanced Light Mode/Dark Mode with CSS</h3>
+                    <p>by Alex Brown - 4 min read</p>
+                </article>
+                <article class="article">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8GZ4iNGasHqpuAenwW8sLIVtcbfycyAs_aA&s" alt="Article Image">
+                    <h3>How To Tic Tac Toe Game in Javascript</h3>
+                    <p>by Emma Wilson - 7 min read</p>
+                </article>
+                <article class="article">
+                    <img src="https://web.dev/static/blog/baseline-scrollbar-props/image/scrollbar-styling-baseline.png" alt="Article Image">
+                    <h3>CSS scrollbar-gutter and scrollbar-width are Baseline Newly available</h3>
+                    <p>by DarkElixirRain - 6 min read</p>
+                </article>
+                <article class="article">
+                    <img src="https://web.dev/static/blog/web-ai-acceleration-fund/image/cover.jpg" alt="Article Image">
+                    <h3>Announcing the Web AI Acceleration Fund</h3>
+                    <p>by Addy Osmani - 10 min read</p>
+                </article>
+                <article class="article">
+                    <img src="https://web.dev/static/blog/build-ai-chatbot-series/images/cover.jpg" alt="Article Image">
+                    <h3>Build local and offline-capable chatbots</h3>
+                    <p>by Alexendra Khlappera - 19 min read</p>
+                </article>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const navMenu = document.querySelector(".nav-menu ul");
+
+            menuToggle.addEventListener("click", function() {
+                navMenu.classList.toggle("active");
+            });
+        });
+    </script>
+</body>
+</html>

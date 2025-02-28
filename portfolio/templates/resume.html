@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bishal Chaudhary - Resume</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <header id="header" class="header-tops">
+      <div class="container">
+          <div class="logo">
+              <img src="https://byteforge.studio/static/logo-f7f24263d67f0bdc2e26dd6113060b97.png" alt="ByteForge Technologies" />
+          </div>
+          <div class="menu-toggle">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+          </div>
+          <nav class="nav-menu">
+              <ul>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="{{ url_for('about_page') }}">About Me</a></li>
+                  <li><a href="{{ url_for('resume_page') }}">Resume</a></li>
+                  <li><a href="{{ url_for('contact_page') }}">Contact</a></li>
+                  <li><a href="{{ url_for('blog_page') }}">Blog</a></li>
+              </ul>
+          </nav>
+      </div>
+  </header>
+
+    <div class="container mx-auto px-6 py-8">
+      <div class="bg-white p-6 rounded-lg shadow-lg max-w-4xl mx-auto">
+        <div class="text-center">
+          <h1 class="text-3xl font-bold text-gray-800">Bishal Chaudhary</h1>
+          <p class="text-lg text-gray-600">Software Developer</p>
+          <p class="text-gray-500">
+            Email: bc9829588@gmail.com | Phone: 9829588039
+          </p>
+        </div>
+
+        <section class="mt-8">
+          <h2 class="text-2xl font-semibold text-gray-800">
+            Professional Summary
+          </h2>
+          <p class="mt-4 text-gray-600">
+            Experienced software developer with a passion for building scalable,
+            efficient web applications. Proficient in various programming
+            languages and frameworks, including React, Flask, and SQL. Strong
+            problem-solving skills and the ability to work in fast-paced
+            environments to deliver high-quality solutions.
+          </p>
+        </section>
+
+        <section class="mt-8">
+          <h2 class="text-2xl font-semibold text-gray-800">Education</h2>
+          <div class="mt-4">
+            <div class="flex justify-between">
+              <p class="text-gray-700 font-semibold">
+                Bachelor of Information Technology
+              </p>
+              <p class="text-gray-500">2023 - Present</p>
+            </div>
+            <p class="text-gray-600">
+              Texas College of Management and IT, Kathmandu, Nepal
+            </p>
+            <p class="text-gray-600">
+              Relevant Coursework: Web Development, Data Structures, Algorithms,
+              Networking
+            </p>
+          </div>
+        </section>
+        <section class="mt-8">
+          <h2 class="text-2xl font-semibold text-gray-800">Work Experience</h2>
+          <div class="mt-4">
+            <div class="flex justify-between">
+              <p class="text-gray-700 font-semibold">
+                Software Developer Intern
+              </p>
+              <p class="text-gray-500">June 2023 - August 2023</p>
+            </div>
+            <p class="text-gray-600">
+              ByteForge Technologies, Kathmandu, Nepal
+            </p>
+            <ul class="list-disc ml-6 text-gray-600 mt-2">
+              <li>
+                Collaborated with the development team to build and deploy web
+                applications using React and Flask.
+              </li>
+              <li>
+                Implemented API integrations to enhance functionality and
+                improve user experience.
+              </li>
+              <li>
+                Developed front-end components and ensured responsiveness using
+                Tailwind CSS.
+              </li>
+            </ul>
+          </div>
+          <div class="mt-6">
+            <div class="flex justify-between">
+              <p class="text-gray-700 font-semibold">Junior Developer</p>
+              <p class="text-gray-500">March 2022 - May 2023</p>
+            </div>
+            <p class="text-gray-600">Bishal Solutions, Kathmandu, Nepal</p>
+            <ul class="list-disc ml-6 text-gray-600 mt-2">
+              <li>
+                Developed and maintained backend systems using Flask and
+                SQLAlchemy.
+              </li>
+              <li>
+                Contributed to designing scalable APIs for client-side and
+                internal applications.
+              </li>
+              <li>
+                Collaborated with cross-functional teams to ensure code quality
+                and consistency.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="mt-8">
+          <h2 class="text-2xl font-semibold text-gray-800">Skills</h2>
+          <div class="mt-4 grid grid-cols-2 md:grid-cols-3 gap-4">
+            <span class="text-gray-600">JavaScript</span>
+            <span class="text-gray-600">React</span>
+            <span class="text-gray-600">Flask</span>
+            <span class="text-gray-600">Tailwind CSS</span>
+            <span class="text-gray-600">SQL</span>
+            <span class="text-gray-600">Git & GitHub</span>
+            <span class="text-gray-600">API Development</span>
+            <span class="text-gray-600">Node.js</span>
+            <span class="text-gray-600">Docker</span>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navMenu = document.querySelector(".nav-menu ul");
+
+        menuToggle.addEventListener("click", function () {
+          navMenu.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>
