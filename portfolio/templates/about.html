@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bishal Chaudhary - About Me</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <header id="header" class="header-tops">
+        <div class="container">
+            <div class="logo">
+                <img src="https://byteforge.studio/static/logo-f7f24263d67f0bdc2e26dd6113060b97.png" alt="ByteForge Technologies" />
+            </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="{{ url_for('about_page') }}">About Me</a></li>
+                    <li><a href="{{ url_for('resume_page') }}">Resume</a></li>
+                    <li><a href="{{ url_for('contact_page') }}">Contact</a></li>
+                    <li><a href="{{ url_for('blog_page') }}">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about" class="about-me">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <h3>Professional <span>Software Engineer</span> at ByteForge Technologies</h3>
+                    <p>
+                        I am Bishal Chaudhary, a passionate software engineer dedicated to creating innovative and efficient digital solutions.
+                        My journey in technology started with a deep curiosity about how systems work, which led me to specialize in software 
+                        development, system design, and application development.
+                    </p>
+                    <h3>Passions & Expertise</h3>
+                    <ul class="services-list">
+                        <li>System Design & Architecture</li>
+                        <li>Project Management & Team Collaboration</li>
+                        <li>Full-stack Development</li>
+                        <li>Writing and Testing Code</li>
+                        <li>Application Development & Optimization</li>
+                    </ul>
+                    <h3>My Mission</h3>
+                    <p>
+                        My mission is to build impactful software solutions that enhance user experiences and solve real-world problems.
+                        I strive to continuously grow, learn new technologies, and contribute meaningfully to the tech community.
+                    </p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span>Email</span>
+                            <p>bc9892958@gmail.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <span>Phone</span>
+                            <p>+977 982958039</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="{{ url_for('static', filename='bishalchaudhary.jpg') }}" alt="Bishal Chaudhary"  />
+                    <div class="image-labels">
+                        <span class="label">Experienced Software Engineer</span>
+                        <span class="name-label">Mr. BISHAL CHAUDHARY</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const navMenu = document.querySelector(".nav-menu ul");
+
+            menuToggle.addEventListener("click", function() {
+                navMenu.classList.toggle("active");
+            });
+        });
+    </script>
+</body>
+</html>
